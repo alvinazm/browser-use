@@ -35,6 +35,7 @@ if TYPE_CHECKING:
 	from browser_use.llm.deepseek.chat import ChatDeepSeek
 	from browser_use.llm.google.chat import ChatGoogle
 	from browser_use.llm.groq.chat import ChatGroq
+	from browser_use.llm.minimax.chat import ChatMiniMax
 	from browser_use.llm.mistral.chat import ChatMistral
 	from browser_use.llm.oci_raw.chat import ChatOCIRaw
 	from browser_use.llm.ollama.chat import ChatOllama
@@ -94,6 +95,7 @@ _LAZY_IMPORTS = {
 	'ChatOpenAI': ('browser_use.llm.openai.chat', 'ChatOpenAI'),
 	'ChatOpenRouter': ('browser_use.llm.openrouter.chat', 'ChatOpenRouter'),
 	'ChatVercel': ('browser_use.llm.vercel.chat', 'ChatVercel'),
+	'ChatMiniMax': ('browser_use.llm.minimax.chat', 'ChatMiniMax'),
 }
 
 # Cache for model instances - only created when accessed
@@ -158,4 +160,5 @@ __all__ = [
 	'ChatOpenRouter',
 	'ChatVercel',
 	'ChatCerebras',
+	'ChatMiniMax',
 ]
